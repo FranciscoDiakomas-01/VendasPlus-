@@ -4,6 +4,8 @@ import { useState } from "react";
 import l from "../../assets/pngegg (1).png";
 export default function Config() {
   const [active, setActive] = useState(1);
+  const [payActive, setPayActive] = useState(1);
+  const [userCategory, setUserCategory] = useState(1);
   const [update, setUpdate] = useState(1);
   const payWay = [
     {
@@ -56,37 +58,164 @@ export default function Config() {
                   <input placeholder="Emal" />
                   <input placeholder="Senha" />
                   <input placeholder="Nova Senha" />
+                  <button
+                    onClick={() => {
+                      setUpdate(1);
+                    }}
+                  >
+                    Vizualizar o Perfil
+                  </button>
+                  <button
+                    onClick={() => {
+                      setUpdate(1);
+                    }}
+                  >
+                    Actualizar o Perfil
+                  </button>
                 </article>
-                <button
-                  onClick={() => {
-                    setUpdate(1);
-                  }}
-                >
-                  Vizualizar o Perfil
-                </button>
               </aside>
             )}
           </>
         ) : active == 2 ? (
           <div id="pay">
             <div>
-              <button>Listar</button>
-              <button>Cadastrar</button>
+              <button
+                onClick={() => {
+                  setPayActive(1);
+                }}
+                style={{
+                  backgroundColor: payActive == 1 ? "#535bf2 " : "",
+                  color: payActive == 1 ? "#ffff " : "",
+                }}
+              >
+                Listar
+              </button>
+              <button
+                style={{
+                  backgroundColor: payActive == 2 ? "#535bf2 " : "",
+                  color: payActive == 2 ? "#ffff " : "",
+                }}
+                onClick={() => {
+                  setPayActive(2);
+                }}
+              >
+                Cadastrar
+              </button>
             </div>
-            <article>
-              {payWay.map((pay) => (
-                <span key={pay.id}>
-                  <div>{pay.name}</div>
-                  <div>
-                    <strong>{pay.name}</strong>
-                    <div>{pay.description}</div>
-                  </div>
-                </span>
-              ))}
-            </article>
+            {payActive == 1 ? (
+              <article>
+                {payWay.map((pay) => (
+                  <span key={pay.id}>
+                    <div>{pay.name}</div>
+                    <div>
+                      <strong>{pay.name}</strong>
+                      <div>{pay.description}</div>
+                    </div>
+                  </span>
+                ))}
+              </article>
+            ) : (
+              <form>
+                <label htmlFor="name">Nome</label>
+                <input
+                  placeholder="Nome da Forma de Pagamento"
+                  id="name"
+                  name="name"
+                ></input>
+                <label htmlFor="desc">Descrição</label>
+                <input
+                  placeholder="Descrição da Forma de Pagamento"
+                  name="desc"
+                  id="desc"
+                ></input>
+                <button
+                  style={{
+                    backgroundColor: "#535bf2",
+                  }}
+                >
+                  Cadastrar
+                </button>
+              </form>
+            )}
           </div>
         ) : (
-          <></>
+          <>
+            <div id="pay">
+              <div>
+                <button
+                  onClick={() => {
+                    setUserCategory(1);
+                  }}
+                  style={{
+                    backgroundColor: userCategory == 1 ? "#108850 " : "",
+                    color: userCategory == 1 ? "#ffff " : "#108850",
+                    border: "1px #108850 solid",
+                  }}
+                >
+                  Listar
+                </button>
+                <button
+                  style={{
+                    backgroundColor: userCategory == 2 ? "#108850 " : "",
+                    color: userCategory == 2 ? "#ffff " : "#108850",
+                    border: "1px #108850 solid",
+                  }}
+                  onClick={() => {
+                    setUserCategory(2);
+                  }}
+                >
+                  Cadastrar
+                </button>
+              </div>
+              {userCategory == 1 ? (
+                <article>
+                  {payWay.map((pay) => (
+                    <span
+                      key={pay.id}
+                      style={{
+                        backgroundColor: "#108850 ",
+                      }}
+                    >
+                      <div>{pay.name}</div>
+                      <div>
+                        <strong>{pay.name}</strong>
+                        <div>{pay.description}</div>
+                      </div>
+                    </span>
+                  ))}
+                </article>
+              ) : (
+                <form>
+                  <label htmlFor="name">Nome</label>
+                  <input
+                    placeholder="Nome da Categoria de Funcionário"
+                    id="name"
+                    name="name"
+                  ></input>
+                  <label htmlFor="desc">Descrição</label>
+                  <input
+                    placeholder="Descrição da da Categoria de Funcionário"
+                    name="desc"
+                    id="desc"
+                  ></input>{" "}
+                  <label htmlFor="sal">Salário</label>
+                  <input
+                    placeholder="Salário"
+                    id="sal"
+                    name="sal"
+                    type="number"
+                  ></input>
+                  <label htmlFor="sal">Salário</label>
+                  <select>
+                    <option>Selecione um tipo de Permisão</option>
+                    <option>1</option>
+                    <option>2</option>
+                  </select>
+                  <button>Cadastrar</button>
+                </form>
+              )}
+            </div>
+          </>
         )}
       </section>
       <nav>

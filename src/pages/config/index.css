@@ -79,12 +79,15 @@
   border-radius: 4px;
 }
 #config > section aside button {
-  width: 50%;
+  width: 100%;
   border: none;
   height: 45px;
   background-color: #108850;
   color: #ffff;
   border-radius: 4px;
+}
+#config > section aside button:last-of-type{
+  background-color: #535bf2;
 }
 #config > section aside article input{
   height: 50px;
@@ -120,11 +123,11 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 60%;
+  width: 80%;
   background-color: #ffff;
   box-shadow: 4px 4px 4ic rgba(0, 0, 0, 0.195);
   padding: 20px;
-  height: 50%;
+  height: 70%;
   overflow: hidden;
   overflow-Y: scroll;
 }
@@ -152,7 +155,28 @@
   width: 100%;
   justify-content: space-between;
   background-color: #535bf2;
-  padding: 10px;
+  padding: 30px 10px;
   color: #ffff;
   border-radius: 4px;
+}
+
+#pay form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+}
+#pay form input , #pay form select{
+  height: 50px;
+
+}
+
+#pay form button{
+  width: 40%;
+  background-color: #108850;
+  border: none;
+  color: #ffff;
+  border-radius: 4px;
+  height: 40px;
 }
