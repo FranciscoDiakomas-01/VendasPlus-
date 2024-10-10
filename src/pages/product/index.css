@@ -1,0 +1,223 @@
+
+
+#produt{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    color: black;
+}
+
+#produt > button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(52, 181, 104);
+    height: 10px;
+    width: 20px;
+    z-index: 999;
+    border: none;
+    width: 50px;
+    height: 50px;
+    color: #ffff;
+    font-size: 18pt;
+    font-weight: bold;
+    border-radius: 50%;
+
+}
+
+
+#scrollPdouct{
+    margin-top: 70px;
+    overflow-Y: scroll;
+    display: grid;
+    width: 96.5%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    height: 100%;
+}
+
+#scrollPdouct img{
+    height: 90%;
+    width: 90%;
+}
+
+#scrollPdouct aside{
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.151);
+    width: 240px;
+    height: 220px;
+    padding: 25px;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#scrollPdouct aside div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+#scrollPdouct aside div p{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #1075ce;
+}
+#scrollPdouct aside div i{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(8, 149, 100);
+    border-radius: 50%;
+}
+#scrollPdouct button{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+    border: none;
+}
+#scrollPdouct svg:active{
+    scale: 0.6;
+}
+
+#formProduct{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.345);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#formProduct form{
+    display: flex;
+    background-color: white;
+    width: 70%;
+    flex-direction: column;
+    gap: 30px;
+    padding: 25px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#formProduct form article{
+    width: 100%;
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    gap: 20px;
+}
+
+#formProduct form span{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#formProduct form span button{
+    width: 50%;
+    height: 40px;
+    background-color: #05783a;
+    color: white;
+    border: none;
+}
+#formProduct form span button:last-of-type{
+    background-color: #e80615;
+}
+#formProduct h2{
+    text-align: center;
+    font-size: 22pt;
+}
+
+#formProduct img{
+    height: 100px;
+    width: 100px;
+}
+
+#formProduct div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#formProduct div span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 15%;
+    overflow: hidden;
+}
+
+#formProduct div span input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#formProduct input, #formProduct select{
+    height: 40px;
+}
+#formProduct nav{
+    width: 40%;
+    display: flex;
+    gap: 50px;
+    position: relative;
+}
+#formProduct nav p {
+    cursor: pointer;
+}
+#formProduct nav span{
+    position: absolute;
+    bottom: -10px;
+    height: 4px;
+    width: 20%;
+    border-radius: 4px;
+    transition: all .5s linear;
+    background-color: #05783a;
+}
+#formProduct nav span.rihgth{
+    margin-left: 100px;
+    transition: all .5s linear;
+    background-color: #e25508;
+}
+
+#seeProduct{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+}
+
+#seeProduct img{
+    height: 250px;
+    width: 250px;
+    border-radius: 0%;
+}
+
+#seeProduct aside{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#seeProduct p{
+    display: flex;
+    gap: 20px;
+}

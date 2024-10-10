@@ -1,0 +1,102 @@
+
+
+#persosn{
+    color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+}
+
+#persosn #filtroPerson{
+    padding: 10px;
+    padding-top: 100px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#persosn #filtroPerson select{
+    height: 40px;
+}
+
+#persosn > button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: #0a8f5a;
+    color: #ffff;
+}
+
+
+#grelhaPerson{
+    width: 98.4%;
+    padding: 10px;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+#grelhaPerson img{
+    height: 100px;
+    width: 100px;
+}
+
+#grelhaPerson figure{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.192);
+    height: 250px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    border-radius: 8px;
+    z-index: 999;
+}
+
+#grelhaPerson figure span{
+    position: absolute;
+    color: #ffff;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s linear;
+}
+
+#grelhaPerson figure span:first-of-type{
+    top: 0;
+    right: 0;
+    z-index: 8;
+    background-color: #0a8f5a;
+}
+
+#grelhaPerson figure span:last-of-type{
+    bottom: 0;
+    left: 0;
+    z-index: 8;
+    background-color: #db072b;
+}
+
+#grelhaPerson figure span:active{
+    opacity: 0.5;
+    scale: 0.9;
+}

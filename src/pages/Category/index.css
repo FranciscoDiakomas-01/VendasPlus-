@@ -1,0 +1,258 @@
+
+
+#category{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    color: black;
+}
+
+#category > button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(52, 181, 104);
+    height: 10px;
+    width: 20px;
+    z-index: 999;
+    border: none;
+    width: 50px;
+    height: 50px;
+    color: #ffff;
+    font-size: 18pt;
+    font-weight: bold;
+    border-radius: 50%;
+
+}
+
+
+#scrollCategory{
+    margin-top: 70px;
+    overflow-Y: scroll;
+    display: grid;
+    width: 96.5%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    height: 100%;
+}
+
+#scrollCategory img{
+    height: 90%;
+    width: 90%;
+}
+
+#scrollCategory aside{
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.151);
+    width: 240px;
+    height: 220px;
+    padding: 25px;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#scrollCategory aside div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+#scrollCategory aside div button{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+    align-items: center;
+    height: 30px;
+    justify-content: center;
+    border: none;
+    background-color: #0b64a7;
+    color: #ffff;
+    font-size: 13pt;
+    border-radius: 5px;
+}
+
+#scrollCategory aside div button:last-of-type{
+    background-color: #dc0d22;
+}
+#formProduct{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.345);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#formProduct form{
+    display: flex;
+    background-color: white;
+    width: 70%;
+    flex-direction: column;
+    gap: 30px;
+    padding: 25px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#formProduct form article{
+    width: 100%;
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    gap: 20px;
+}
+
+#formProduct form span{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#formProduct form span button{
+    width: 50%;
+    height: 40px;
+    background-color: #05783a;
+    color: white;
+    border: none;
+}
+#formProduct form span button:last-of-type{
+    background-color: #e80615;
+}
+#formProduct h2{
+    text-align: center;
+    font-size: 22pt;
+}
+
+#formProduct img{
+    height: 100px;
+    width: 100px;
+}
+
+#formProduct div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#formProduct div span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 15%;
+    overflow: hidden;
+}
+
+#formProduct div span input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#formProduct input, #formProduct select{
+    height: 40px;
+}
+#formProduct nav{
+    width: 40%;
+    display: flex;
+    gap: 50px;
+    position: relative;
+}
+#formProduct nav p {
+    cursor: pointer;
+}
+#formProduct nav span{
+    position: absolute;
+    bottom: -10px;
+    height: 4px;
+    width: 20%;
+    border-radius: 4px;
+    transition: all .5s linear;
+    background-color: #05783a;
+}
+#formProduct nav span.rihgth{
+    margin-left: 100px;
+    transition: all .5s linear;
+    background-color: #e25508;
+}
+
+#formProduct nav span.rihgth1{
+    margin-left: 230px;
+    transition: all .5s linear;
+    background-color: #e25508;
+}
+
+#seeProduct{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+}
+
+#seeProduct img{
+    height: 250px;
+    width: 250px;
+    border-radius: 0%;
+}
+
+#seeProduct aside{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#seeProduct p{
+    display: flex;
+    gap: 20px;
+}
+
+#productList{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    height: 300px;
+    overflow-x: hidden;
+    padding: 10px;
+    overflow-y: scroll;
+    padding-right: 18px;
+}
+
+#productList > span{
+    display: flex;
+    background-color: #f6f4f4;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.31);
+    padding: 10px 5px;
+    height: 120px;
+    flex-direction: row;
+}
+
+#productList > span div{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-left: 20px;
+    gap: 10px;
+}
+
+#productList > span div p{
+    display: flex;
+    gap: 20px;
+}

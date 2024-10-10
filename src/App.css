@@ -1,0 +1,71 @@
+#app{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 100dvh;
+}
+
+#app > nav{
+  width: 15%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 99;
+}
+
+#app > nav div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+
+}
+#app > nav div img{
+  width: 60%;
+  height: 100%;
+
+}
+#app > nav div button{
+  width: 90%;
+  border: none;
+  border-radius: 8px;
+  gap: 10px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#535bf2;
+  color: #ffff;
+}
+
+#app > nav ol{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+}
+#app > nav ol a{
+  display: flex;
+  gap: 2px;
+  flex-direction: column-reverse;
+  background-color: #ffff;
+  width: 87%;
+  height: 63px;
+  border-radius: 7px;
+  align-items: center;
+}
+
+#app > section{
+  
+
+  background-color: #ffff;
+  margin-left: 15%;
+  position: fixed;
+  right: 0;
+  height: 100%;
+  width: 85%;
+}
