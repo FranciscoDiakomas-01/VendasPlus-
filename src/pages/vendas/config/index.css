@@ -1,0 +1,155 @@
+#config {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  color: black;
+}
+#config > section {
+  background-color: #ffff;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#config > section aside {
+  display: flex;
+  width: 80%;
+  background-color: #ffff;
+  border: none;
+  box-shadow: 4px 4px 2ic rgba(0, 0, 0, 0.274);
+  border-radius: 5px;
+  height: 80%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+#config > section aside img {
+  width: 150px;
+  height: 150px;
+}
+
+#config > section aside article {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+#config > section aside article span {
+  display: flex;
+  background-color: #faf5f5;
+  height: 60px;
+  align-items: center;
+  padding: 0 10px;
+  box-shadow: 4px 4px 4px #0000004d;
+  border-radius: 4px;
+}
+#config > section aside button {
+  width: 100%;
+  border: none;
+  height: 45px;
+  background-color: #108850;
+  color: #ffff;
+  border-radius: 4px;
+}
+#config > section aside button:last-of-type{
+  background-color: #535bf2;
+}
+#config > section aside article input{
+  height: 50px;
+  border: solid 1px #040404;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.123);
+}
+
+#picture{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+#picture  > input{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#picture  > svg{
+  position: absolute;
+  color: #108850;
+  bottom: 0px;
+  right: 20px;
+  font-size: 22pt;
+}
+
+#pay{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  background-color: #ffff;
+  box-shadow: 4px 4px 4ic rgba(0, 0, 0, 0.195);
+  padding: 20px;
+  height: 70%;
+  overflow: hidden;
+  overflow-Y: scroll;
+}
+#pay > div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#pay button{
+  width: 20%;
+  border: solid 1px #535bf2;
+  background-color: transparent;
+  height: 30px;
+}
+#pay > article{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#pay > article span{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #535bf2;
+  padding: 30px 10px;
+  color: #ffff;
+  border-radius: 4px;
+}
+
+#pay form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+}
+#pay form input , #pay form select{
+  height: 50px;
+
+}
+
+#pay form button{
+  width: 40%;
+  background-color: #108850;
+  border: none;
+  color: #ffff;
+  border-radius: 4px;
+  height: 40px;
+}

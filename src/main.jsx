@@ -15,6 +15,11 @@ import Finance from './pages/finance/finance.jsx'
 import DashBoard from './pages/dash/index.jsx'
 import Config from './pages/config/index.jsx'
 import Login from './pages/login/index.jsx'
+import Vendas from './pages/vendas/index.jsx'
+import SellProduct from './pages/vendas/sell/index.jsx'
+import ConfigSell from './pages/vendas/config/index.jsx'
+import DashBoardSell from './pages/vendas/dash/index.jsx'
+import FinanceSell from './pages/vendas/finance/finance.jsx'
 register()
 const router = createBrowserRouter([
   {
@@ -48,9 +53,31 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path : '/login',
-    element : <Login/>
-  }
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/sells",
+    element: <Vendas />,
+    children: [
+      {
+        path: "/sells/product",
+        element: <SellProduct />,
+      },
+      {
+        path: "/sells",
+        element: <DashBoardSell />,
+      },
+      {
+        path: "/sells/config",
+        element: <ConfigSell />,
+      },
+      {
+        path: "/sells/finance",
+        element: <FinanceSell />,
+      },
+    ],
+  },
 ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
