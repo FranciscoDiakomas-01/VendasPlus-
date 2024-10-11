@@ -9,6 +9,7 @@ import Functionary from './pages/functionary/index.jsx'
 import Finance from './pages/finance/finance.jsx'
 import DashBoard from './pages/dash/index.jsx'
 import Config from './pages/config/index.jsx'
+import Login from './pages/login/index.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path : '/login',
+    element : <Login/>
+  }
 ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
