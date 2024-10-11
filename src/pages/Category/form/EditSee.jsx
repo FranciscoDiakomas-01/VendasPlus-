@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import '../index.css'
 import { useRef , useState } from 'react';
 import defaultLogo from '../../../assets/pngegg (1).png'

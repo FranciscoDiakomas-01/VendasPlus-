@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
 import SearchBar from "../../componets/searchBar";
 import "./index.css";
 import log from "../../assets/pngegg.png";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
+import SeeSells from "./see";
 import { useState } from "react";
 export default function IndexFinance({ types, close }) {
-  const [despesa, setDespesa] = useState([
-   
+  const despesa = [
     {
       userName: "Pedro Miguel",
       value: 2000,
@@ -118,9 +119,13 @@ export default function IndexFinance({ types, close }) {
       id: 2,
       email: "jose@gmail.com",
     },
-  ]);
+  ];
+  const [sell , setSell] = useState(false)
   return (
     <main id="modal">
+      {
+        sell && <SeeSells close={setSell}/>
+      }
       {types == 1 ? (
         <>
           <SearchBar placeholder="Código de Barra" />
@@ -303,7 +308,9 @@ export default function IndexFinance({ types, close }) {
                     </td>
                     <td>{d.date}</td>
                     <td id="min">
-                      <button>Ver</button>
+                      <button onClick={()=>{
+                        setSell(true)
+                      }}>Ver</button>
                     </td>
                   </tr>
                 ))}

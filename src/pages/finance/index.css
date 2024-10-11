@@ -282,9 +282,108 @@
 
 
 #modal footer ~ div{
-    font-size: 14pt;
+    font-size: 12pt;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#seeSells{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    z-index: 999;
+    background-color: #000000a9;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    
+    justify-content: center;
+}
+
+#seeSells > div {
+    display: flex;
+    gap: 10px;
+}
+
+#seeSells > div button{
+    width: 120px;
+    height: 35px;
+    background-color: transparent;
+    color: white;
+    border: solid 1px;
+    border-radius: 4px;
+}
+#seeSells > div button:last-of-type{
+    background-color: rgb(199, 31, 31);
+    border: none;
+}
+
+#seeSells > article{
+    width: 90%;
+    background-color: #ffffff;
+    height: 70%;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s linear;
+}
+#seeSells > article.up{
+    width: 50%;
+}
+
+#seeSells > article > span{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  ;
+    gap: 10px 40px;
+}
+
+#seeSells > article > span strong{
+    width: 100%;
+    background-color: #242424;
+    color: #ffff;
+    padding: 4px;
+    border-radius: 2px;
+}
+
+#seeSells > article > h2{
+    text-align: center;
+}
+#seeSells  img{
+    height: 130px;
+    width: 130px;
+}
+#seeSells  aside{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#seeSells  aside section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+#seeSells  #productSlide{
+    background-color: #ffffff;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.273);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    border-radius: 10px;
+}
+
+#seeSells  #productSlide p:last-of-type{
+    color: red;
 }
