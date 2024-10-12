@@ -386,4 +386,33 @@
 
 #seeSells  #productSlide p:last-of-type{
     color: red;
+    
+}
+
+#seeSells > form{
+    width: 50%;
+    background-color: #ffff;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 20px;
+}
+#seeSells > form input , #seeSells > form select , #seeSells > form button{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#seeSells > form button{
+    border: none;
+    background-color: #0d9b67;
+    color: #ffff;
+    border-radius: 5px;
+}
+#seeSells > form button:last-of-type{
+    background-color: #dd0b32;
 }

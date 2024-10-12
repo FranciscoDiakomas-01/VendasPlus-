@@ -121,11 +121,10 @@ export default function IndexFinance({ types, close }) {
     },
   ];
   const [sell , setSell] = useState(false)
+  const [type , setType] = useState(1)
   return (
     <main id="modal">
-      {
-        sell && <SeeSells close={setSell}/>
-      }
+      {sell && <SeeSells close={setSell} type={type} />}
       {types == 1 ? (
         <>
           <SearchBar placeholder="Código de Barra" />
@@ -308,9 +307,13 @@ export default function IndexFinance({ types, close }) {
                     </td>
                     <td>{d.date}</td>
                     <td id="min">
-                      <button onClick={()=>{
-                        setSell(true)
-                      }}>Ver</button>
+                      <button
+                        onClick={() => {
+                          setSell(true);
+                        }}
+                      >
+                        Ver
+                      </button>
                     </td>
                   </tr>
                 ))}
@@ -334,6 +337,20 @@ export default function IndexFinance({ types, close }) {
         </>
       ) : (
         <></>
+      )}
+      {types == 2 && (
+        <button
+          onClick={() => {
+            setType(2)
+            setSell(true);
+          }}
+          style={{
+            right: "100px",
+            backgroundColor: "#242424",
+          }}
+        >
+          +
+        </button>
       )}
 
       <button

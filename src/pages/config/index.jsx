@@ -5,6 +5,7 @@ import l from "../../assets/pngegg (1).png";
 export default function Config() {
   const [active, setActive] = useState(1);
   const [payActive, setPayActive] = useState(1);
+  const [despesaActive, setDespesaActive] = useState(1);
   const [userCategory, setUserCategory] = useState(1);
   const [update, setUpdate] = useState(1);
   const payWay = [
@@ -138,6 +139,80 @@ export default function Config() {
               </form>
             )}
           </div>
+        ) : active == 3 ? (
+          <>
+            <div id="pay">
+              <div>
+                <button
+                  onClick={() => {
+                    setDespesaActive(1);
+                  }}
+                  style={{
+                    backgroundColor: despesaActive == 1 ? "#242424 " : "",
+                    color: despesaActive == 1 ? "#ffff " : "#108850",
+                    border: "1px # #242424 solid",
+                  }}
+                >
+                  Listar
+                </button>
+                <button
+                  style={{
+                    backgroundColor: despesaActive == 2 ? "#242424 " : "",
+                    color: despesaActive == 2 ? "#ffff " : "#242424",
+                    border: "1px  #242424 solid",
+                  }}
+                  onClick={() => {
+                    setDespesaActive(2);
+                  }}
+                >
+                  Cadastrar
+                </button>
+              </div>
+              {despesaActive == 1 ? (
+                <article>
+                  {payWay.map((pay) => (
+                    <span
+                      key={pay.id}
+                      style={{
+                        backgroundColor: " #242424",
+                      }}
+                    >
+                      <div>{pay.name}</div>
+                      <div>
+                        <strong>{pay.name}</strong>
+                        <div>{pay.description}</div>
+                      </div>
+                    </span>
+                  ))}
+                </article>
+              ) : (
+                <form>
+                  <label htmlFor="name">Nome</label>
+                  <input
+                    placeholder="Nome da Categoria de Despesa"
+                    id="name"
+                    name="name"
+                  ></input>{" "}
+                  <label htmlFor="name">Descrição</label>
+                  <input
+                    placeholder="Descrição da Categoria de Despesa"
+                    id="name"
+                    name="name"
+                  ></input>
+                  <label htmlFor="desc">Valor Mínimo</label>
+                  <input
+                    placeholder="Valor mínimo"
+                    name="desc"
+                    type="number"
+                    id="desc"
+                  ></input>
+                  <button style={{ backgroundColor: " #242424" }}>
+                    Cadastrar
+                  </button>
+                </form>
+              )}
+            </div>
+          </>
         ) : (
           <>
             <div id="pay">
@@ -205,12 +280,6 @@ export default function Config() {
                     name="sal"
                     type="number"
                   ></input>
-                  <label htmlFor="sal">Salário</label>
-                  <select>
-                    <option>Selecione um tipo de Permisão</option>
-                    <option>1</option>
-                    <option>2</option>
-                  </select>
                   <button>Cadastrar</button>
                 </form>
               )}
@@ -251,6 +320,18 @@ export default function Config() {
             style={{
               backgroundColor: active == 3 ? "#535bf2" : "",
               color: active == 3 ? "#ffff" : "#535bf2",
+            }}
+          >
+            <FaPaypal />
+            <p>Despesas</p>
+          </a>
+          <a
+            onClick={() => {
+              setActive(4);
+            }}
+            style={{
+              backgroundColor: active == 4 ? "#535bf2" : "",
+              color: active == 4 ? "#ffff" : "#535bf2",
             }}
           >
             <FaUsers />

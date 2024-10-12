@@ -1,13 +1,15 @@
 import { BsUiChecksGrid, BsBarChart } from "react-icons/bs";
 import { BiLogOut } from "react-icons/bi";
 import { LuShoppingCart } from "react-icons/lu";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link , useNavigate} from "react-router-dom";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaUserGroup } from "react-icons/fa6";
 import "./App.css";
 import logo from './assets/pngegg (2).png'
 import { useState } from "react";
 function App() {
+
+  const navigate = useNavigate()
   const links = [
     {
       name: "DashBoard",
@@ -74,7 +76,9 @@ function App() {
           ))}
         </ol>
         <div>
-          <button>
+          <button onClick={()=>{
+            navigate("/login")
+          }}>
             <BiLogOut />
             <p>Sair</p>
           </button>
